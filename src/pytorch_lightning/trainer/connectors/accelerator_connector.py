@@ -475,7 +475,7 @@ class AcceleratorConnector:
                 if tpu_cores:
                     self._accelerator_flag = "tpu"
                 if gpus:
-                    self._accelerator_flag = "gpu"
+                    self._accelerator_flag = "cuda"
                 if num_processes:
                     self._accelerator_flag = "cpu"
 
