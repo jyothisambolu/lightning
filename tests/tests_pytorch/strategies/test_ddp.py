@@ -29,7 +29,7 @@ from tests_pytorch.helpers.runif import RunIf
 from tests_pytorch.strategies import ddp_model
 from tests_pytorch.utilities.distributed import call_training_script
 
-CLI_ARGS = "--max_epochs 1 --accelerator gpu --devices 2 --strategy ddp"
+CLI_ARGS = "--max_epochs 1 --accelerator cuda --devices 2 --strategy ddp"
 
 
 @RunIf(min_cuda_gpus=2)

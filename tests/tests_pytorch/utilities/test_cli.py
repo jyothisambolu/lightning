@@ -193,10 +193,10 @@ def test_parse_args_parsing_complex_types(cli_args, expected, instantiate):
 @pytest.mark.parametrize(
     ["cli_args", "expected_gpu"],
     [
-        ("--accelerator gpu --devices 1", [0]),
-        ("--accelerator gpu --devices 0,", [0]),
-        ("--accelerator gpu --devices 1,", [1]),
-        ("--accelerator gpu --devices 0,1", [0, 1]),
+        ("--accelerator cuda --devices 1", [0]),
+        ("--accelerator cuda --devices 0,", [0]),
+        ("--accelerator cuda --devices 1,", [1]),
+        ("--accelerator cuda --devices 0,1", [0, 1]),
     ],
 )
 def test_parse_args_parsing_gpus(monkeypatch, cli_args, expected_gpu):
