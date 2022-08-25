@@ -9,7 +9,7 @@ HPU_TESTS_DICTIONARY = {
     "hpu4_test": "python -m pytest -sv tests/tests_pytorch/accelerators/test_hpu.py --forked --hpus 4 --junitxml=hpu4_test-results.xml"
 }
 
-HPU1_TEST = HPU_TESTS_DICTIONARY["hpu4_test"]
+HPU4_TEST = HPU_TESTS_DICTIONARY["hpu4_test"]
 
 PARALLEL_HPU_TESTS_EXECUTION = [[HPU4_TEST, HPU4_TEST]]
 TIMEOUT = 60  # seconds
