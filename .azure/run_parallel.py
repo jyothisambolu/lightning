@@ -6,12 +6,12 @@ import subprocess
 import sys
 
 HPU_TESTS_DICTIONARY = {
-    "hpu1_test": "python -m pytest -sv accelerators/test_hpu.py --forked --hpus 4 --junitxml=hpu8_test-results.xml"
+    "hpu4_test": "python -m pytest -sv tests/tests_pytorch/accelerators/test_hpu.py --forked --hpus 4 --junitxml=hpu4_test-results.xml"
 }
 
-HPU1_TEST = HPU_TESTS_DICTIONARY["hpu1_test"]
+HPU1_TEST = HPU_TESTS_DICTIONARY["hpu4_test"]
 
-PARALLEL_HPU_TESTS_EXECUTION = [[HPU1_TEST, HPU1_TEST]]
+PARALLEL_HPU_TESTS_EXECUTION = [[HPU4_TEST, HPU4_TEST]]
 TIMEOUT = 60  # seconds
 TIMEOUT_EXIT_CODE = -9
 
